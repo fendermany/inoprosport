@@ -32,7 +32,7 @@ if (sliders) {
 	sliders_bild_callback();
 }
 
-function sliders_bild_callback(params) { }
+function sliders_bild_callback(params) {}
 
 let sliderScrollItems = document.querySelectorAll('._swiper_scroll');
 if (sliderScrollItems.length > 0) {
@@ -59,10 +59,10 @@ if (sliderScrollItems.length > 0) {
 }
 
 
-function sliders_bild_callback(params) { }
+function sliders_bild_callback(params) {}
 
 let slider = new Swiper('.slider', {
-	
+
 	autoplay: {
 		delay: 2000,
 		disableOnInteraction: false,
@@ -73,7 +73,7 @@ let slider = new Swiper('.slider', {
 	autoHeight: true,
 	speed: 1500,
 	centeredSlides: false,
-	slidesPerView: 4,
+	slidesPerView: 1,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	//loop: true,
@@ -110,7 +110,99 @@ let slider = new Swiper('.slider', {
 		lazyImageReady: function () {
 			ibg();
 		},
-	}
+	},
+	on: {
+		init() {
+			this.el.addEventListener('mouseenter', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('mouseleave', () => {
+				this.autoplay.start();
+			});
+
+			this.el.addEventListener('touchstart', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('touchend', () => {
+				this.autoplay.start();
+			});
+		}
+	},
+	// And if we need scrollbar
+	//scrollbar: {
+	//	el: '.swiper-scrollbar',
+	//},
+});
+
+let slider2 = new Swiper('.slider2', {
+
+	autoplay: {
+		delay: 4000,
+		disableOnInteraction: false,
+	},
+	observer: true,
+	observeParents: true,
+	spaceBetween: 20,
+	autoplayDisableOnInteraction: true,
+	// autoHeight: true,
+	speed: 1500,
+	centeredSlides: false,
+	slidesPerView: 1,
+	//touchRatio: 0,
+	//simulateTouch: false,
+	//loop: true,
+	//preloadImages: false,
+	//lazy: true,
+	// Dotts
+	//pagination: {
+	//	el: '.slider-quality__pagging',
+	//	clickable: true,
+	//},
+	// Arrows
+	navigation: {
+		nextEl: '.slider2-next',
+		prevEl: '.slider2-prev',
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1.1,
+			spaceBetween: 5
+		},
+		576: {
+			slidesPerView: 1,
+			spaceBetween: 25
+		},
+		1023: {
+			slidesPerView: 1,
+			spaceBetween: 25
+		}
+	},
+	on: {
+		lazyImageReady: function () {
+			ibg();
+		},
+	},
+	on: {
+		init() {
+			this.el.addEventListener('mouseenter', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('mouseleave', () => {
+				this.autoplay.start();
+			});
+
+			this.el.addEventListener('touchstart', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('touchend', () => {
+				this.autoplay.start();
+			});
+		}
+	},
 	// And if we need scrollbar
 	//scrollbar: {
 	//	el: '.swiper-scrollbar',
