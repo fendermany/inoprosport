@@ -63,15 +63,15 @@ function sliders_bild_callback(params) {}
 
 let slider = new Swiper('.slider', {
 
-	autoplay: {
-		delay: 2000,
-		disableOnInteraction: false,
-	},
+	// autoplay: {
+	// 	delay: 2000,
+	// 	disableOnInteraction: true,
+	// },
 	observer: true,
 	observeParents: true,
 	spaceBetween: 0,
 	autoHeight: true,
-	speed: 1500,
+	speed: 1000,
 	centeredSlides: false,
 	slidesPerView: 1,
 	//touchRatio: 0,
@@ -91,16 +91,13 @@ let slider = new Swiper('.slider', {
 	// },
 	breakpoints: {
 		320: {
-			slidesPerView: 1,
+			slidesPerView: 1.2,
 		},
 		576: {
-			slidesPerView: 2,
-		},
-		768: {
-			slidesPerView: 2,
+			slidesPerView: 2.2,
 		},
 		1023: {
-			slidesPerView: 3,
+			slidesPerView: 3.2,
 		},
 		1366: {
 			slidesPerView: 4,
@@ -111,25 +108,25 @@ let slider = new Swiper('.slider', {
 			ibg();
 		},
 	},
-	on: {
-		init() {
-			this.el.addEventListener('mouseenter', () => {
-				this.autoplay.stop();
-			});
+	// on: {
+	// 	init() {
+	// 		this.el.addEventListener('mouseenter', () => {
+	// 			this.autoplay.stop();
+	// 		});
 
-			this.el.addEventListener('mouseleave', () => {
-				this.autoplay.start();
-			});
+	// 		this.el.addEventListener('mouseleave', () => {
+	// 			this.autoplay.start();
+	// 		});
 
-			this.el.addEventListener('touchstart', () => {
-				this.autoplay.stop();
-			});
+	// 		this.el.addEventListener('touchstart', () => {
+	// 			this.autoplay.stop();
+	// 		});
 
-			this.el.addEventListener('touchend', () => {
-				this.autoplay.start();
-			});
-		}
-	},
+	// 		this.el.addEventListener('touchend', () => {
+	// 			this.autoplay.start();
+	// 		});
+	// 	}
+	// },
 	// And if we need scrollbar
 	//scrollbar: {
 	//	el: '.swiper-scrollbar',
@@ -139,8 +136,8 @@ let slider = new Swiper('.slider', {
 let slider2 = new Swiper('.slider2', {
 
 	autoplay: {
-		delay: 4000,
-		disableOnInteraction: false,
+		delay: 15000,
+		disableOnInteraction: true,
 	},
 	observer: true,
 	observeParents: true,
@@ -167,7 +164,7 @@ let slider2 = new Swiper('.slider2', {
 	},
 	breakpoints: {
 		320: {
-			slidesPerView: 1.1,
+			slidesPerView: 1.2,
 			spaceBetween: 5
 		},
 		576: {
@@ -184,25 +181,25 @@ let slider2 = new Swiper('.slider2', {
 			ibg();
 		},
 	},
-	on: {
-		init() {
-			this.el.addEventListener('mouseenter', () => {
-				this.autoplay.stop();
-			});
+	// on: {
+	// 	init() {
+	// 		this.el.addEventListener('mouseenter', () => {
+	// 			this.autoplay.stop();
+	// 		});
 
-			this.el.addEventListener('mouseleave', () => {
-				this.autoplay.start();
-			});
+	// 		this.el.addEventListener('mouseleave', () => {
+	// 			this.autoplay.start();
+	// 		});
 
-			this.el.addEventListener('touchstart', () => {
-				this.autoplay.stop();
-			});
+	// 		this.el.addEventListener('touchstart', () => {
+	// 			this.autoplay.stop();
+	// 		});
 
-			this.el.addEventListener('touchend', () => {
-				this.autoplay.start();
-			});
-		}
-	},
+	// 		this.el.addEventListener('touchend', () => {
+	// 			this.autoplay.start();
+	// 		});
+	// 	}
+	// },
 	// And if we need scrollbar
 	//scrollbar: {
 	//	el: '.swiper-scrollbar',
