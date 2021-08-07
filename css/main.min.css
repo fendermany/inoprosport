@@ -741,6 +741,11 @@ button .news-footer__icon:not(.negative):hover .btn .news-footer__icon:not(.nega
 	background-color: #a7a6e1;
 }
 
+.categoryChoice__btn:hover:after,
+.categoryChoice__btn:hover:before {
+	background-color: #a7a6e1;
+}
+
 .header__menu-btn_wrap.active:after {
 	opacity: 0;
 }
@@ -1363,6 +1368,7 @@ button .news-footer__icon:not(.negative):hover .btn .news-footer__icon:not(.nega
 	-ms-flex: 0 0 auto;
 	flex: 0 0 auto;
 	position: relative;
+	display: flex;
 }
 
 .aside__content_inner> :last-child {
@@ -1866,6 +1872,15 @@ button .news-footer__icon:not(.negative):hover .btn .news-footer__icon:not(.nega
 
 .aside__block--photo .news__block_comment:hover svg {
 	fill: #7c7cd5;
+}
+
+.aside__content {
+	flex: 100%;
+}
+
+.aside__content_inner {
+	position: sticky;
+	top: 4em;
 }
 
 .aside__block--olimp {
@@ -2468,16 +2483,14 @@ iframe.instagram-media {
 	scrollbar-width: none;
 }
 
-.topMatches__wrapper::-webkit-scrollbar {
+.topMatches__wrapper::-webkit-scrollbar,
+.categoryChoice__list::-webkit-scrollbar {
 	display: none;
 	width: 0;
 	height: 0;
 }
 
 .topMatches__item {
-	/* -webkit-box-flex: 0;
-  -ms-flex: 0 0 324px;
-  flex: 0 0 324px; */
 	height: 76px;
 }
 
@@ -2693,7 +2706,7 @@ iframe.instagram-media {
 	height: 50px;
 	background: #4E4DC2;
 	width: 100%;
-	padding: 0 20px;
+	padding: 0;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2703,6 +2716,7 @@ iframe.instagram-media {
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
+	scrollbar-width: none;
 }
 
 .categoryChoice__list {
@@ -2719,13 +2733,14 @@ iframe.instagram-media {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	padding: 0;
+	padding: 0 20px 0 0;
 	margin: 0;
 	overflow: hidden;
-	max-width: calc(100% - 20px);
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	max-width: 100%;
 	height: 50px;
+	width: 100%;
+	overflow-x: scroll;
+	scrollbar-width: none;
 }
 
 .categoryChoice__item {
@@ -2737,6 +2752,10 @@ iframe.instagram-media {
 	-ms-flex-align: center;
 	align-items: center;
 	height: 50px;
+}
+
+.categoryChoice__item:first-child{
+	padding-left: 20px;
 }
 
 .categoryChoice__link {
@@ -3428,11 +3447,12 @@ iframe.instagram-media {
 
 .slider2-next {
 	background: url("../images/slider__next.svg") no-repeat center center;
-	width: 8px;
-	height: 14px;
+	background-color: #fff;
+	width: 40px;
+	height: 95%;
 	position: absolute;
 	display: block;
-	right: 16px;
+	right: 0;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
@@ -3441,11 +3461,12 @@ iframe.instagram-media {
 
 .slider2-prev {
 	background: url("../images/slider__next.svg") no-repeat center center;
-	width: 8px;
-	height: 14px;
+	background-color: #fff;
+	width: 40px;
+    height: 95%;
 	position: absolute;
 	display: block;
-	left: 16px;
+	left: 0;
 	top: 50%;
 	-webkit-transform: translateY(-50%) rotate(180deg);
 	-ms-transform: translateY(-50%) rotate(180deg);
@@ -3454,14 +3475,16 @@ iframe.instagram-media {
 
 .slider2-prev.swiper-button-disabled {
 	background: url("../images/slider__prev.svg") no-repeat center center;
+	background-color: #fff;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	
+
 }
 
 .slider2-next.swiper-button-disabled {
 	background: url("../images/slider__prev.svg") no-repeat center center;
+	background-color: #fff;
 	-webkit-transform: translateY(-50%) rotate(-180deg);
 	-ms-transform: translateY(-50%) rotate(-180deg);
 	transform: translateY(-50%) rotate(-180deg);
@@ -3477,7 +3500,7 @@ iframe.instagram-media {
 	-ms-grid-row: 2;
 	-ms-grid-column: 2;
 	grid-area: more;
-	padding: 0 10px;
+	padding: 0 10px 0 0;
 	border: none;
 	outline: none;
 	/* width: 100%; */
@@ -3568,7 +3591,10 @@ iframe.instagram-media {
 
 	.page__content {
 		max-width: 1027px;
-		grid-template-areas: "center right""center left""more ...";
+		grid-template-areas:
+			"center right"
+			"center left"
+			"more ...";
 	}
 
 	.aside__wrap--left {
@@ -3869,7 +3895,7 @@ iframe.instagram-media {
 	.blockNewsSlider__wrapper {
 		padding: 0;
 		border: none;
-		
+
 	}
 
 	.slider2-prev,

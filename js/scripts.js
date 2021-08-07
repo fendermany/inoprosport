@@ -817,28 +817,28 @@ svg4everybody(), $(document).ready((function () {
 
 
 // categoryChoice
-document.addEventListener('DOMContentLoaded', () => {
-	const btn = document.querySelector('.categoryChoice__btn'),
-		menu = document.querySelector('.categoryChoice__btn-container');
+// document.addEventListener('DOMContentLoaded', () => {
+// 	const btn = document.querySelector('.categoryChoice__btn'),
+// 		menu = document.querySelector('.categoryChoice__btn-container');
 
-	const toggleMenu = function() {
-		btn.classList.toggle('_active');
-		menu.classList.toggle('_active');
-	}
+// 	const toggleMenu = function() {
+// 		btn.classList.toggle('_active');
+// 		menu.classList.toggle('_active');
+// 	}
 
-	btn.addEventListener('click', () => {
-		toggleMenu();
-	})
+// 	btn.addEventListener('click', () => {
+// 		toggleMenu();
+// 	})
 
-	document.addEventListener('click', (e) => {
-		const target = e.target;
-		const its_menu = target == menu || menu.contains(target);
-		const its_btn = target == btn;
-		const menu_is_active = menu.classList.contains('_active');
+// 	document.addEventListener('click', (e) => {
+// 		const target = e.target;
+// 		const its_menu = target == menu || menu.contains(target);
+// 		const its_btn = target == btn;
+// 		const menu_is_active = menu.classList.contains('_active');
 
-		if (!its_menu && !its_btn && menu_is_active) {
-			toggleMenu();
-		}
-	})
+// 		if (!its_menu && !its_btn && menu_is_active) {
+// 			toggleMenu();
+// 		}
+// 	})
 	
-})
+// })
