@@ -135,10 +135,10 @@ let slider = new Swiper('.slider', {
 
 let slider2 = new Swiper('.slider2', {
 
-	autoplay: {
-		delay: 15000,
-		disableOnInteraction: true,
-	},
+	// autoplay: {
+	// 	delay: 15000,
+	// 	disableOnInteraction: true,
+	// },
 	observer: true,
 	observeParents: true,
 	spaceBetween: 20,
