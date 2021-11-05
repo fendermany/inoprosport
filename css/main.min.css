@@ -3585,9 +3585,6 @@ iframe.instagram-media {
 	width: 100%;
 	min-height: 84px;
 	box-shadow: inset 0px -1px 0px #DBDBDB;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
 	padding: 10px 15px;
 	gap: 5px;
 }
@@ -3602,7 +3599,8 @@ iframe.instagram-media {
 
 @media (min-width: 768px) {
 	.lentaNews__item {
-		flex-direction: row;
+		display: grid;
+		grid-template: 1fr / 100px 1fr;
 		gap: 30px;
 		padding: 20px 30px;
 	}
@@ -3620,14 +3618,35 @@ iframe.instagram-media {
 	font-size: 12px;
 	line-height: 18px;
 	color: #fff;
+	width: max-content;
+	display: inline-block;
+	margin-right: 5px;
+	height: 18px;
 }
 
-.lentaNews__inner {}
+@media (min-width: 768px) {
+	.lentaNews__time {
+		display: block;
+	}
+}
+
+.lentaNews__time.grey {
+	background: #B1B1B1;
+}
+
 
 .lentaNews__descr {
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 22px;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 20px;
+	color: #000;
+}
+
+@media (min-width: 768px) {
+	.lentaNews__descr {
+		font-size: 14px;
+		line-height: 22px;
+	}
 }
 
 /* Responsive */
