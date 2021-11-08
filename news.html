@@ -305,7 +305,7 @@
 		<div class="page__content">
 
 			<!-- aside -->
-			<div class="aside__wrap aside__wrap--left">
+			<div data-sticky="true" class="aside__wrap aside__wrap--left">
 				<div class="aside__content_inner--left">
 					<div class="blockBanner">
 						<a class="blockBanner__link" href="#"><img class="blockBanner__img" src="images/banner.png"
@@ -516,7 +516,7 @@
 				</button>
 			</div>
 			<!-- aside -->
-			<div class="aside__wrap aside__wrap--right">
+			<div data-sticky="true" class="aside__wrap aside__wrap--right">
 				<div class="aside__content_inner--right">
 					<div class="blockDiscussion">
 						<div class="blockDiscussion__title">
@@ -833,41 +833,7 @@
 
 	<script src="js/swiper.min.js"></script>
 	<script src="js/sliders.js"></script>
-	<script src="js/sticky-sidebar.min.js"></script>
-	<style>
-		.aside__wrap--left,
-		.aside__wrap--right {
-			will-change: min-height;
-		}
-
-		.aside__content_inner--left,
-		.aside__content_inner--right {
-			transform: translate(0, 0);
-			transform: translate3d(0, 0, 0);
-			will-change: position, transform;
-		}
-	</style>
-	<script>
-		const sidebar = new StickySidebar('.aside__wrap--left', {
-			topSpacing: 70,
-			bottomSpacing: 210,
-			resizeSensor: true,
-			containerSelector: '.page__content',
-			innerWrapperSelector: '.aside__content_inner--left',
-			minWidth: 1365
-		});
-
-		const sidebarSecond = new StickySidebar('.aside__wrap--right', {
-			topSpacing: 70,
-			bottomSpacing: 210,
-			resizeSensor: true,
-			containerSelector: '.page__content',
-			innerWrapperSelector: '.aside__content_inner--right',
-			minWidth: 1365
-		});
-
-	</script>
-
+	<script src="js/StickySidebar.min.js"></script>
 
 
 </body>
