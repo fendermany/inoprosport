@@ -1,0 +1,27 @@
+.left-aside {
+	background: #ffffff;
+	padding: 15px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&>*+*{
+		margin-left: 20px;
+	}
+	@media (min-width: $tablet) {
+		flex-direction: column;
+		width: rem(319);
+
+		& > * + * {
+			margin-top: 15px;
+			margin-left: 0;
+		}
+	}
+	/* .left-aside__banner */
+	&__banner {
+		display: block;
+		img{
+			max-width: 100%;
+		}
+	}
+}

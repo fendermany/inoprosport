@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220126221304" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="preload" href="/fonts/montserrat.min.woff" as="font" type="font/woff" crossorigin="anonymous" />
+	<link rel="preload" href="/fonts/roboto-condensed-subset.woff" as="font" type="font/woff" crossorigin="anonymous" />
+	<link rel="preload" href="/fonts/roboto-condensed-bold-subset.woff" as="font" type="font/woff" crossorigin="anonymous" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="fixed">
+	<header class="header">
+		<nav class="header_nav_wrap">
+			<div class="header_nav-open">
+				<span class="header_nav-open_item"></span>
+			</div>
+			<div class="header_nav_container">
+				<a href="/rss/rss.xml" target="_blank" class="header_nav-rss">rss</a>
+				<a href="/authors" class="header_nav-item">Авторы</a>
+				<a href="/about" class="header_nav-item">О сайте</a>
+				<a href="/contacts" class="header_nav-item">Контакты</a>
+
+				<div class="header_nav-social_wrap">
+					<a href="https://zen.yandex.ru/inoprosport.ru" target="_blank" class="header_social-item">
+						<svg class="header_social-svg" width="14px" height="26px">
+							<use href="img/icons.svg#icon-zn" />
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/inoprosport" target="_blank" class="header_social-item">
+						<svg class="header_social-svg" width="20px" height="20px">
+							<use href="img/icons.svg#icon-instagram" />
+						</svg>
+					</a>
+					<a href="https://twitter.com/inoprosportru" target="_blank" class="header_social-item">
+						<svg class="header_social-svg" width="21px" height="18px">
+							<use href="img/icons.svg#icon-twitter" />
+						</svg>
+					</a>
+					<a href="https://www.facebook.com/inoprosport.ru/" target="_blank" class="header_social-item">
+						<svg class="header_social-svg" width="20px" height="20px">
+							<use href="img/icons.svg#icon-facebook" />
+						</svg>
+					</a>
+					<a href="https://vk.com/public156048843" target="_blank" class="header_social-item">
+						<svg class="header_social-svg" width="23px" height="14px">
+							<use href="img/icons.svg#icon-vk" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<a class="header__logo" href="/">
+			<img class="header__logo-img" src="img/logo.svg" alt="logo" />
+			<img class="header__logo-text" src="img/logo_text.svg" alt="logo-text" />
+		</a>
+
+		<!-- search-form -->
+		<div class="header__search-wrap">
+			<div class="header__search-open">
+				<svg class="header__search-open_svg">
+					<use href="img/icons.svg#icon-search" />
+				</svg>
+			</div>
+			<div class="header__search-container">
+				<form action="/search" class="header__search">
+					<input type="text" class="header__search-input" placeholder="Поиск по сайту..." name="query" />
+					<button class="header__search-btn" type="submit">
+						<svg class="header__search-open_svg">
+							<use href="img/icons.svg#icon-search" />
+						</svg>
+					</button>
+				</form>
+				<button class="header__search-close close-search">
+					<svg class="header__search-close_svg">
+						<use href="img/icons.svg#icon-cancel" />
+					</svg>
+				</button>
+			</div>
+		</div>
+		<!-- /search-form -->
+
+		<!-- category -->
+		<div class="header__menu-wrap">
+			<div class="header__menu">
+				<span class="menu__item-all open-menu">выбрать вид спорта</span>
+				<a href="/rubrics/translations" class="menu__item">Все материалы</a>
+				<a href="/rubrics/football" class="menu__item active">Футбол</a>
+				<a href="/rubrics/hockey" class="menu__item">Хоккей</a>
+				<a href="/rubrics/figure_skating" class="menu__item">Фигурное катание</a>
+				<a href="/rubrics/single_combat" class="menu__item">Единоборства</a>
+				<a href="/rubrics/tennis" class="menu__item">Теннис</a>
+				<a href="/rubrics/formula_I" class="menu__item">Формула I</a>
+				<a href="/match-center-pm24" class="menu__item">Матч-центр</a>
+			</div>
+			<div class="header__menu-btn_wrap open-menu">
+				<div class="header__menu-btn_container">
+					<a href="/rubrics/translations" class="header__menu-btn_container-item">Все материалы</a>
+					<a href="/rubrics/football" class="header__menu-btn_container-item">Футбол</a>
+					<a href="/rubrics/hockey" class="header__menu-btn_container-item">Хоккей</a>
+					<a href="/rubrics/figure_skating" class="header__menu-btn_container-item">Фигурное катание</a>
+					<a href="/rubrics/single_combat" class="header__menu-btn_container-item">Единоборства</a>
+					<a href="/rubrics/tennis" class="header__menu-btn_container-item">Теннис</a>
+					<a href="/rubrics/formula_I" class="header__menu-btn_container-item">Формула I</a>
+					<a href="/match-center-pm24" class="header__menu-btn_container-item">Матч-центр</a>
+				</div>
+			</div>
+		</div>
+		<!-- /category -->
+
+		<button class="header__btn-login open-login">
+			<svg class="header__btn-login_svg">
+				<use href="img/icons.svg#icon-user" />
+			</svg>
+		</button>
+
+		<div class="header__social-wrap">
+			<div class="header__social-open"></div>
+			<div class="header__social-container">
+				<div class="header__social">
+					<a href="https://zen.yandex.ru/inoprosport.ru" target="_blank" class="header__social-item">
+						<svg class="header__social-svg" width="14px" height="26px">
+							<use href="img/icons.svg#icon-zn" />
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/inoprosport" target="_blank" class="header__social-item">
+						<svg class="header__social-svg" width="20px" height="20px">
+							<use href="img/icons.svg#icon-instagram" />
+						</svg>
+					</a>
+					<a href="https://twitter.com/inoprosportru" target="_blank" class="header__social-item">
+						<svg class="header__social-svg" width="21px" height="18px">
+							<use href="img/icons.svg#icon-twitter" />
+						</svg>
+					</a>
+					<a href="https://www.facebook.com/inoprosport.ru/" target="_blank" class="header__social-item">
+						<svg class="header__social-svg" width="20px" height="20px">
+							<use href="img/icons.svg#icon-facebook" />
+						</svg>
+					</a>
+					<a href="https://vk.com/public156048843" target="_blank" class="header__social-item">
+						<svg class="header__social-svg" width="23px" height="14px">
+							<use href="img/icons.svg#icon-vk" />
+						</svg>
+					</a>
+					<a href="#" target="_blank" class="header__social-item close-social">
+						<svg class="header__social-svg" width="16px" height="16px">
+							<use href="img/icons.svg#icon-cancel" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="page__wrapper _container">
+
+		<div class="topbanner">
+			<picture><source srcset="img/topbanner.webp" type="image/webp"><img src="img/topbanner.png" alt="topbanner"></picture>
+		</div>
+		<div class="categoryChoice">
+			<ul class="categoryChoice__list">
+				<li class="categoryChoice__item">
+					<a href="#" class="categoryChoice__link">Иностранцы о спорте России:</a>
+					<div class="categoryChoice__quantity">+<span>1</span></div>
+				</li>
+				<li class="categoryChoice__item">
+					<a href="#" class="categoryChoice__link">Статьи</a>
+					<div class="categoryChoice__quantity">+<span>6</span></div>
+				</li>
+				<li class="categoryChoice__item _active">
+					<a href="#" class="categoryChoice__link">Комменты</a>
+					<div class="categoryChoice__quantity">+<span>3</span></div>
+				</li>
+				<li class="categoryChoice__item">
+					<a href="#" class="categoryChoice__link">Превью</a>
+					<div class="categoryChoice__quantity">+<span>2</span></div>
+				</li>
+				<li class="categoryChoice__item">
+					<a href="#" class="categoryChoice__link">Отчеты</a>
+					<div class="categoryChoice__quantity">+<span>6</span></div>
+				</li>
+				<li class="categoryChoice__item">
+					<a href="#" class="categoryChoice__link">Онлайны</a>
+					<div class="categoryChoice__quantity">+<span>1</span></div>
+				</li>
+				<li class="categoryChoice__item">
+					<a href="#" class="categoryChoice__link">Видео</a>
+					<div class="categoryChoice__quantity">+<span>12</span></div>
+				</li>
+				<li class="categoryChoice__item">
+					<div class="categoryChoice__btn">+</div>
+				</li>
+			</ul>
+		</div>
+
+
+		<div class="page__content">
+			<!-- aside -->
+			<div data-sticky="true" class="aside__wrap aside__wrap--left">
+				<div data-da=".aside__wrap--right,1365,first" class="aside__content_inner--left">
+					<div class="left-aside">
+						<a href="javascript:" class="left-aside__banner">
+							<picture><source srcset="img/banner-winline.webp" type="image/webp"><img src="img/banner-winline.png" alt="banner"></picture>
+						</a>
+						<a href="javascript:" class="left-aside__banner">
+							<picture><source srcset="img/banner-casino.webp" type="image/webp"><img src="img/banner-casino.png" alt="banner"></picture>
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<!-- news-wrap -->
+			<div class="content">
+				<div class="singleNews">
+					<div class="singleNews__inner">
+						<div class="singleNews__header">
+							<div class="singleNews__category">
+								<span class="red">Футбол</span>
+								<span class="blue">Переводы</span>
+							</div>
+							<ul class="singleNews__hashtags">
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+								<li><a href="#"># Павел Белоносов</a></li>
+							</ul>
+							<div data-da=".singleNews__hashtags,768,2" class="singleNews__hashtags-fix"></div>
+							<div data-da=".singleNews__hashtags,768,2" class="icon-tags-arrow_wrap">
+								<svg class="icon icon-tags-arrow">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-arrow">
+									</use>
+								</svg>
+							</div>
+						</div>
+						<div class="singleNews__title">
+							«Надеюсь, что «Спартак» потребует 100 миллионов, чтобы мы никогда не купили это «дерево» – фаны
+							«Порту»
+							против трансфера Зе Луиша
+						</div>
+						<div class="singleNews__links">
+							<div data-da=".singleNews__category,768,0" class="singleNews__date">
+								20 июня
+							</div>
+							<div class="singleNews__source">
+								<svg class="icon icon-planet">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-planet">
+									</use>
+								</svg>
+								<span>
+									Источник:
+									<a href="#">www.youtube.com</a>
+								</span>
+							</div>
+							<div class="singleNews__author">
+								<svg class="icon icon-user">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-user_b">
+									</use>
+								</svg>
+								<span>
+									Автор:
+									<a href="#">Павел Белоносов</a>
+								</span>
+							</div>
+							<div class="singleNews__comments">
+								<svg class="news-footer__icon" viewBox="0 0 15 13">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-comment">
+									</use>
+								</svg>
+								<a href="#">431</a>
+							</div>
+						</div>
+					</div>
+					<div class="singleNews__body">
+						<p>
+							Московский «Спартак» пока отказывается продавать Зе Луиша в «Порту», <a href="#">сообщает</a>
+							португальский ресурс <b>«Mais Futebol»</b>.
+						</p>
+						<p>
+							Российский клуб получил и проанализировал первую оферту «драконов» по форварду из Кабо-Верде,
+							однако
+							спартаковцев не устроили финансовые.
+						</p>
+						<p>
+							«Я могу только подтвердить наличие предложения от «Порту», но я не уполномочен озвучивать цифры», –
+							заявил директор департамента по связям с общественностью московского «Спартака» Леонид Трахтенберг.
+							Переговоры между клубами возобновятся на следующей неделе, подчеркивает «Mais Futebol». «Порту»
+							хочет
+							взять Зе Луиша за 8 миллионов евро, в то время как «Спартак» не желает опускать сумму трансфера.
+						</p>
+						<div class="singleNews__banner">
+							<picture><source srcset="img/Ban.webp" type="image/webp"><img src="img/Ban.png" alt="news-image"></picture>
+						</div>
+						<p>
+							Многие поклонники «драконов» не испытывают симпатии к форварду «красно-белых», а отдельные фанаты
+							португальского суперклуба даже запустили <a href="#">петицию с требованием не покупать Зе
+								Луиша</a>. В
+							свете этого,
+							нежелание «Спартака» идти на компромисс вызывает облегчение.
+						</p>
+						<picture><source srcset="img/Pic.webp" type="image/webp"><img src="img/Pic.png" alt="news-image"></picture>
+					</div>
+					<div class="singleNews__footer">
+						<div class="singleNews__likes">
+							<div class="singleNews__likes-quantity">
+								<svg class="news-footer__icon" viewBox="0 0 25 21">
+									<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-heart">
+									</use>
+								</svg>
+								<span>2</span>
+							</div>
+							<div class="singleNews__likes-buttons">
+								<button type="button" data-value="1">
+									<svg class="news-footer__icon likes" viewBox="0 0 25 25">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-vote+">
+										</use>
+									</svg>
+								</button>
+								<button type="button" data-value="-1">
+									<svg class="news-footer__icon likes" viewBox="0 0 25 25">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-vote">
+										</use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="singleNews__comments">
+							<svg class="news-footer__icon" viewBox="0 0 15 13">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-comment">
+								</use>
+							</svg>
+							<span>
+								Комментарии:
+								<a href="#">431</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="moreTranslates">
+					<div class="moreTranslates__title">
+						<span>Еще переводы</span>
+						<a class="news__block-more_header_link" href="/">
+							<svg class="icon icon-home">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-home_b">
+								</use>
+							</svg>
+							<span class="d-desk">Перейти на главную страницу</span>
+							<span class="d-mobi">На главную</span>
+						</a>
+					</div>
+					<ul class="moreTranslates__list">
+						<div class="moreTranslates__item">
+							<div class="moreTranslates__item-time grey">
+								Вчера 14:22
+							</div>
+							<div class="moreTranslates__item-inner">
+								<a href="#" class="moreTranslates__item-descr">
+									«Судя по роликам на YouTube, он смахивает на Бергкампа» - лондонские фаны
+								</a>
+								<div class="moreTranslates__item-category">
+									<span class="red">Футбол</span>
+								</div>
+								<div class="singleNews__comments">
+									<svg class="news-footer__icon" viewBox="0 0 15 13">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-comment">
+										</use>
+									</svg>
+									<a href="#">431</a>
+								</div>
+							</div>
+						</div>
+						<div class="moreTranslates__item">
+							<div class="moreTranslates__item-time grey">
+								12:30
+							</div>
+							<div class="moreTranslates__item-inner">
+								<a href="#" class="moreTranslates__item-descr">
+									«Беспокоит, что он недостаточно продуктивен на международном уровне» - болельщики из Детройта
+									о Подколзине
+								</a>
+								<div class="moreTranslates__item-category">
+									<span class="red">Футбол</span>
+								</div>
+								<div class="singleNews__comments">
+									<svg class="news-footer__icon" viewBox="0 0 15 13">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/icons.svg#icon-comment">
+										</use>
+									</svg>
+									<a href="#">431</a>
+								</div>
+							</div>
+						</div>
+					</ul>
+				</div>
+				<div class="singleNews__banner">
+					<picture><source srcset="img/Ban.webp" type="image/webp"><img src="img/Ban.png" alt="news-image"></picture>
+				</div>
+			</div>
+
+			<!-- aside -->
+			<div data-sticky="true" class="aside__wrap aside__wrap--right">
+				<div class="aside__content_inner--right">
+					<div class="right-aside">
+						<div class="right-aside__spollers spollers">
+							<div class="spollers__title">
+								<span>споилеры</span>
+								<a href="javascript:">
+									<img src="img/arrow-right-red.svg" alt="arrow-right-red" />
+								</a>
+							</div>
+							<ul class="spollers__list">
+								<li class="spollers__item">
+									<div class="spollers__inner">
+										<span class="spollers__time">12:59</span>
+										<a href="javascript:" class="spollers__comments">
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+											</svg>
+
+											<span class="spollers__comments-count">23</span>
+										</a>
+									</div>
+									<a href="javascript:" class="spollers__text">
+										Сборная России заработала на Евро 10,75 миллиона евро
+									</a>
+									<a href="javascript:" class="spollers__comments">
+										<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+										</svg>
+
+										<span class="spollers__comments-count">23</span>
+									</a>
+								</li>
+								<li class="spollers__item">
+									<div class="spollers__inner">
+										<span class="spollers__time">12:59</span>
+										<a href="javascript:" class="spollers__comments">
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+											</svg>
+
+											<span class="spollers__comments-count">23</span>
+										</a>
+									</div>
+									<a href="javascript:" class="spollers__text">
+										Сборная России заработала на Евро 10,75 миллиона евро
+									</a>
+									<a href="javascript:" class="spollers__comments">
+										<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+										</svg>
+
+										<span class="spollers__comments-count">23</span>
+									</a>
+								</li>
+								<li class="spollers__item">
+									<div class="spollers__inner">
+										<span class="spollers__time">12:59</span>
+										<a href="javascript:" class="spollers__comments">
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+											</svg>
+
+											<span class="spollers__comments-count">23</span>
+										</a>
+									</div>
+									<a href="javascript:" class="spollers__text">
+										Сборная России заработала на Евро 10,75 миллиона евро
+									</a>
+									<a href="javascript:" class="spollers__comments">
+										<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+										</svg>
+
+										<span class="spollers__comments-count">23</span>
+									</a>
+								</li>
+								<li class="spollers__item">
+									<div class="spollers__inner">
+										<span class="spollers__time">12:59</span>
+										<a href="javascript:" class="spollers__comments">
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+											</svg>
+
+											<span class="spollers__comments-count">23</span>
+										</a>
+									</div>
+									<a href="javascript:" class="spollers__text">
+										Сборная России заработала на Евро 10,75 миллиона евро
+									</a>
+									<a href="javascript:" class="spollers__comments">
+										<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+										</svg>
+
+										<span class="spollers__comments-count">23</span>
+									</a>
+								</li>
+								<li class="spollers__item">
+									<div class="spollers__inner">
+										<span class="spollers__time">12:59</span>
+										<a href="javascript:" class="spollers__comments">
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+											</svg>
+
+											<span class="spollers__comments-count">23</span>
+										</a>
+									</div>
+									<a href="javascript:" class="spollers__text">
+										Сборная России заработала на Евро 10,75 миллиона евро
+									</a>
+									<a href="javascript:" class="spollers__comments">
+										<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+										</svg>
+
+										<span class="spollers__comments-count">23</span>
+									</a>
+								</li>
+								<li class="spollers__item">
+									<div class="spollers__inner">
+										<span class="spollers__time">12:59</span>
+										<a href="javascript:" class="spollers__comments">
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+											</svg>
+
+											<span class="spollers__comments-count">23</span>
+										</a>
+									</div>
+									<a href="javascript:" class="spollers__text">
+										Сборная России заработала на Евро 10,75 миллиона евро
+									</a>
+									<a href="javascript:" class="spollers__comments">
+										<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+										</svg>
+
+										<span class="spollers__comments-count">23</span>
+									</a>
+								</li>
+								<li class="spollers__item">
+									<div class="spollers__inner">
+										<span class="spollers__time">12:59</span>
+										<a href="javascript:" class="spollers__comments">
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+											</svg>
+
+											<span class="spollers__comments-count">23</span>
+										</a>
+									</div>
+									<a href="javascript:" class="spollers__text">
+										Сборная России заработала на Евро 10,75 миллиона евро
+									</a>
+									<a href="javascript:" class="spollers__comments">
+										<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+										</svg>
+
+										<span class="spollers__comments-count">23</span>
+									</a>
+								</li>
+								<li class="spollers__item">
+									<div class="spollers__inner">
+										<span class="spollers__time">12:59</span>
+										<a href="javascript:" class="spollers__comments">
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+											</svg>
+
+											<span class="spollers__comments-count">23</span>
+										</a>
+									</div>
+									<a href="javascript:" class="spollers__text">
+										Сборная России заработала на Евро 10,75 миллиона евро
+									</a>
+									<a href="javascript:" class="spollers__comments">
+										<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M2.45499 12C2.23471 11.9995 2.02417 11.9092 1.87198 11.75C1.63251 11.4971 1.57437 11.1225 1.72598 10.809L2.59 9.022C1.07431 8.27133 0.0834045 6.75934 0 5.07001C0 2.22702 3.07501 0 7 0C10.925 0 14 2.22699 14 5.07001C14 7.91302 10.925 10.141 7 10.141C6.88101 10.141 6.76099 10.141 6.642 10.134L2.793 11.925C2.68704 11.9741 2.57175 11.9997 2.45499 12ZM7.00098 1.64999C4.08798 1.64999 1.62598 3.215 1.62598 5.06799C1.62598 6.18399 2.51297 7.23801 3.99698 7.888C4.23599 7.99298 4.48111 8.0835 4.73099 8.159L4.375 9.36899L6.151 8.54398C6.2905 8.47812 6.44623 8.45447 6.599 8.47598C6.73099 8.48297 6.867 8.48599 6.99899 8.48599C9.91199 8.48599 12.374 6.91998 12.374 5.06799C12.374 3.216 9.91296 1.64999 7.00098 1.64999Z" fill="#4E4DC2" />
+										</svg>
+
+										<span class="spollers__comments-count">23</span>
+									</a>
+								</li>
+							</ul>
+							<a href="javascript:" class="spollers__footer">
+								<span>Перейти в раздел</span>
+								<img src="img/arrow-right.svg" alt="arrow-right" />
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- aside -->
+
+
+		</div>
+		<!-- content -->
+	</section>
+	<footer class="footer">
+		<div class="footer__block-1">
+			<div class="footer__social-wrap">
+				<a href="https://zen.yandex.ru/inoprosport.ru" target="_blank" class="footer__social-item">
+					<svg class="icon icon-social_footer" width="14" height="26">
+						<use href="img/icons.svg#icon-zn" />
+					</svg>
+				</a>
+				<a href="https://www.instagram.com/inoprosport" target="_blank" class="footer__social-item">
+					<svg class="icon icon-social_footer" width="20" height="20">
+						<use href="img/icons.svg#icon-instagram" />
+					</svg>
+				</a>
+				<a href="https://twitter.com/inoprosportru" target="_blank" class="footer__social-item">
+					<svg class="icon icon-social_footer" width="21" height="18">
+						<use href="img/icons.svg#icon-twitter" />
+					</svg>
+				</a>
+				<a href="https://www.facebook.com/inoprosport.ru/" target="_blank" class="footer__social-item">
+					<svg class="icon icon-social_footer" width="20" height="20">
+						<use href="img/icons.svg#icon-facebook" />
+					</svg>
+				</a>
+				<a href="https://vk.com/public156048843" target="_blank" class="footer__social-item">
+					<svg class="icon icon-social_footer" width="23" height="14">
+						<use href="img/icons.svg#icon-vk" />
+					</svg>
+				</a>
+			</div>
+			<div class="footer__copyright-wrap">
+				<div class="footer__copyright">© 2021. InoProSport<span>.</span></div>
+				<div class="footer__copyright-rights">All rights reserved. <br> Учредитель: ООО «Раре.Ру» </div>
+				<div class="footer__copyright-link_wrap">
+					<a class="footer__copyright-link" href="/archive">Архив</a>
+					<a class="footer__copyright-link" href="/authors">Авторы</a>
+					<a class="footer__copyright-link" href="/contacts">Контакты</a>
+					<a class="footer__copyright-rss" href="/rss/rss.xml" target="_blank">RSS</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__block-2">
+			<div class="footer__title">Юридическая информация</div>
+			<div class="footer__text">Свидетельство о регистрации СМИ Эл №ФС77-72704 выдано федеральной службой по
+				надзору
+				в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) 23.04.2018 г.
+			</div>
+		</div>
+		<div class="footer__block-3">
+			<div class="footer__title">Дисклеймер</div>
+			<div class="footer__text">Редакция не несет ответственности за достоверность информации, содержащейся в
+				рекламных объявлениях. Редакция не предоставляет справочной информации.</div>
+		</div>
+		<div class="footer__block-4">
+			<div class="footer__counters-item">
+
+			</div>
+			<div class="footer__counters-item">
+
+			</div>
+		</div>
+		</div>
+	</footer>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+
+	<script src="js/app.min.js?_v=20220126221304"></script>
+</body>
+
+</html>
