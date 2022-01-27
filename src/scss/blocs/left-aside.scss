@@ -1,16 +1,26 @@
 .left-aside {
 	background: #ffffff;
-	padding: 15px;
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.08);
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	&>*+*{
-		margin-left: 20px;
+	& > * + * {
+		margin-top: 5px;
+	}
+	@media (min-width: $mobileSmall) {
+		flex-direction: row;
+		& > * + * {
+			margin-top: 0;
+			margin-left: 5px;
+		}
+	}
+	@media (min-width: $mobile) {
+		padding: 15px;
 	}
 	@media (min-width: $tablet) {
 		flex-direction: column;
-		width: rem(319);
+		width: rem(329);
 
 		& > * + * {
 			margin-top: 15px;
@@ -19,9 +29,11 @@
 	}
 	/* .left-aside__banner */
 	&__banner {
+		width: 100%;
 		display: block;
-		img{
+		img {
 			max-width: 100%;
+			width: 100%;
 		}
 	}
 }

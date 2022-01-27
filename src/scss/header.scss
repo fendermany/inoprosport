@@ -13,7 +13,6 @@
 	height: auto;
 }
 
-
 .header__logo {
 	display: flex;
 	flex-direction: row;
@@ -56,48 +55,32 @@
 
 .header_nav_wrap {
 	position: relative;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	height: 100%;
 	padding: 18px;
-	-webkit-box-pack: start;
-	-ms-flex-pack: start;
 	justify-content: flex-start;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	background-color: #4242a5;
 	order: 0;
 }
 
 .header_nav_container {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	position: absolute;
 	z-index: 75;
 	top: 0;
 	left: 0;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
 	flex-direction: column;
 	width: 320px;
 	min-height: 400px;
 	height: auto;
 	max-height: 100vh;
 	padding: 118px 38px 30px 43px;
-	-webkit-transition: opacity 0.3s;
-	-o-transition: opacity 0.3s;
 	transition: opacity 0.3s;
 	pointer-events: none;
 	opacity: 0;
 	background-color: #4242a5;
-	-webkit-box-shadow: 0 0 9px 0 rgba(6, 6, 6, 0.28);
 	box-shadow: 0 0 9px 0 rgba(6, 6, 6, 0.28);
-	-webkit-box-align: start;
-	-ms-flex-align: start;
 	align-items: flex-start;
 }
 
@@ -114,8 +97,6 @@
 	padding: 3px 7px;
 	background-color: #4e4dc2;
 	color: #fff;
-	-webkit-transition: background-color 0.3s;
-	-o-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 }
 
@@ -125,15 +106,9 @@
 
 .header_nav-item {
 	padding-left: 6px;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 	color: #fff;
-	-webkit-transition: color 0.3s;
-	-o-transition: color 0.3s;
 	transition: color 0.3s;
 }
 
@@ -174,31 +149,21 @@
 	height: 2px;
 	margin-top: -1px;
 	background-color: #fff;
-	-webkit-transition: background-color 0.3s;
-	-o-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 }
 
 .header_nav-open_item:after,
 .header_nav-open_item:before {
 	display: block;
-	-webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
-	transition: background-color 0.3s, -webkit-transform 0.3s;
-	-o-transition: transform 0.3s, background-color 0.3s;
 	transition: transform 0.3s, background-color 0.3s;
-	transition: transform 0.3s, background-color 0.3s, -webkit-transform 0.3s;
 	content: '';
 }
 
 .header_nav-open_item:after {
-	-webkit-transform: translateY(-7px);
-	-ms-transform: translateY(-7px);
 	transform: translateY(-7px);
 }
 
 .header_nav-open_item:before {
-	-webkit-transform: translateY(7px);
-	-ms-transform: translateY(7px);
 	transform: translateY(7px);
 }
 
@@ -208,28 +173,18 @@
 }
 
 .active .header_nav-open_item:after {
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 
 .active .header_nav-open_item:before {
-	-webkit-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
 .header_nav-social_wrap {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	margin-top: auto;
 	width: 100%;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
 	justify-content: space-between;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
 	align-items: center;
 }
 
@@ -248,8 +203,6 @@
 
 .header_social-svg {
 	display: block;
-	-webkit-transition: fill 0.3s ease;
-	-o-transition: fill 0.3s ease;
 	transition: fill 0.3s ease;
 	fill: #fff;
 }
@@ -261,7 +214,6 @@
 	font-size: 17px;
 	white-space: nowrap;
 	text-transform: uppercase;
-	font-family: RobotoCondensed, sans-serif;
 	font-weight: 700;
 	order: 2;
 	flex: 0 1 100%;
@@ -271,6 +223,9 @@
 	width: max-content;
 	@include adaptiveValue('padding-left', 20, 15);
 	@include adaptiveValue('padding-right', 20, 15);
+	@media (min-width: $mobileSmall) {
+		justify-content: flex-start;
+	}
 	@media (min-width: $mobile) {
 		margin-right: 35px;
 		background: transparent;
@@ -306,9 +261,11 @@
 	margin: 15px 0;
 	transition: color 0.4s, background-color 0.4s;
 	color: #fff;
-	font-size: 12px;
-	line-height: 20px;
+	@include adaptiveValue('font-size', 14, 12);
+	@include adaptiveValue('line-height', 22, 20);
 	font-weight: 700;
+	@media (min-width: $mobileSmall) {
+	}
 }
 
 .menu__item-all {
