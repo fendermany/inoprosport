@@ -1,18 +1,5 @@
 //====================================================================================================
 
-.header__banner {
-	width: 100%;
-	position: relative;
-	z-index: 100;
-}
-
-.header__banner img,
-.header__banner iframe {
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
 .header__logo {
 	display: flex;
 	flex-direction: row;
@@ -221,8 +208,8 @@
 	max-width: 100%;
 	justify-content: center;
 	width: max-content;
-	@include adaptiveValue('padding-left', 20, 15);
-	@include adaptiveValue('padding-right', 20, 15);
+	@include adaptiveValue('padding-left', 20, 10);
+	@include adaptiveValue('padding-right', 20, 10);
 	@media (min-width: $mobileSmall) {
 		justify-content: flex-start;
 	}

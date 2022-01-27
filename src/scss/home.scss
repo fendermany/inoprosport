@@ -42,11 +42,11 @@ body {
 
 .page__content {
 	display: grid;
-	grid-template-areas: 'left center right';
+	grid-template-areas: 'center' 'right' 'left';
 	align-items: flex-start;
 	width: 100%;
-	@include adaptiveValue("padding-top", 10, 5);
-	@include adaptiveValue("padding-bottom", 10, 5);
+	@include adaptiveValue('padding-top', 10, 5);
+	@include adaptiveValue('padding-bottom', 10, 5);
 	padding-left: 0;
 	padding-right: 0;
 	margin-left: auto;
@@ -56,6 +56,9 @@ body {
 	z-index: 5;
 	gap: 10px;
 	justify-content: space-between;
+	@media (min-width: $tablet) {
+		grid-template-areas: 'left center right';
+	}
 }
 
 .aside__wrap {
@@ -71,20 +74,6 @@ body {
 	grid-area: center;
 }
 
-.news__block-comment {
-	background-color: #fff;
-	margin-top: 10px;
-	box-shadow: 1.414px 1.414px 4px 0 rgba(0, 0, 0, 0.08);
-}
-
-.news__block-comment > img {
-	display: block;
-	width: 100%;
-	height: auto;
-}
-
-/* Container */
-
 .red {
 	background: #d34007;
 }
@@ -98,89 +87,9 @@ body {
 }
 
 @media (max-width: $pc) {
-	.page__content {
-		display: flex;
-	}
-
 	.content {
-		-webkit-box-ordinal-group: 1;
-		-ms-flex-order: 0;
 		order: 0;
 	}
-}
-
-@media (max-width: $tablet) {
-	.header__banner > img,
-	.header__banner iframe,
-	.header__banner div {
-		display: none;
-	}
-
-
-	.footer__copyright-wrap {
-		flex-direction: row;
-		align-items: center;
-	}
-
-	.footer__copyright span {
-		display: inline;
-	}
-
-	.footer__copyright-rights {
-		margin-left: 6px;
-	}
-
-	.footer__copyright-link_wrap {
-		margin-left: 15px;
-	}
-
-	.footer__block-1 {
-		margin-top: 25px;
-		width: 100%;
-		min-width: 100%;
-	}
-
-	.footer__block-2 {
-		margin-left: 0;
-	}
-
-	.footer__block-3 {
-		max-width: 250px;
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-
-	.page__content {
-		display: -ms-grid;
-		display: grid;
-		grid-template-areas: 'center' 'right' 'left';
-	}
-}
-
-@media (max-width: 919px) {
-	.footer__social-wrap {
-		order: 0;
-	}
-
-	.footer__copyright-wrap {
-		width: 100%;
-		display: block;
-	}
-
-	.footer__copyright {
-		margin-left: 0;
-		display: inline;
-	}
-
-	.footer__copyright-rights {
-		margin-left: 0;
-		display: inline;
-	}
-
-	.footer__copyright-link_wrap {
-		margin-left: 0;
-	}
-
 }
 
 @media (max-width: $mobile) {
@@ -254,25 +163,6 @@ body {
 
 	.footer__counters-item:nth-child(2) {
 		margin-top: 0;
-	}
-}
-
-@media (max-width: 675px) {
-	.footer__text {
-		margin-top: 10px;
-	}
-
-	.footer__block-2 {
-		width: 100%;
-		max-width: 96%;
-	}
-
-	.footer__block-3 {
-		width: 100%;
-		max-width: 100%;
-		margin-right: 0;
-		margin-left: 0;
-		margin-top: 20px;
 	}
 }
 
