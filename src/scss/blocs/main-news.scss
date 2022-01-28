@@ -10,7 +10,7 @@
 .fullnews {
 	min-height: 220px;
 	display: grid;
-	grid-template: 200px auto / 1fr;
+	grid-template: 220px auto / 1fr;
 	grid-auto-rows: auto;
 	position: relative;
 	@media (min-width: em(600)) {
@@ -76,9 +76,12 @@
 			border: 2px solid #dbdbdb;
 			border-radius: 2px;
 			bottom: 5px;
-			right: 5px;
+			left: 5px;
+			@media (min-width:em(600)){
+				right: 5px;
+				left: unset;
+			}
 			@media (min-width: $mobile) {
-				bottom: 5px;
 				left: 5px;
 				right: unset;
 			}

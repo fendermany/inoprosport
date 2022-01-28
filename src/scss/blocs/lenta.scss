@@ -11,7 +11,7 @@
 		align-items: center;
 		justify-content: space-between;
 		@include adaptiveValue('margin-bottom', 10, 5);
-		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.09), inset 0px 2px 0px #4E4DC2;
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.09);
 		@media (min-width: $mobile) {
 			border-top: 2px solid #4e4dc2;
 		}
