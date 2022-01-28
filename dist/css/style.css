@@ -1664,6 +1664,11 @@ h6 {
   /* .spollers__comments-count */
   /* .spollers__footer */
 }
+@media (min-width: 63.99875em) {
+  .spollers {
+    margin-bottom: 0;
+  }
+}
 .spollers__title {
   font-weight: 700;
   text-transform: uppercase;
