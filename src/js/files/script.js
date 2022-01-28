@@ -69,6 +69,12 @@ showMoreBtn.forEach(item => {
 });
 
 
-// Действия с кнопкой в зависимости от количества элементов
+// Обрезаем длину текста в заголовках
 
+const newsDescriptions = document.querySelectorAll('.news__descr');
 
+if(newsDescriptions) {
+	newsDescriptions.forEach(item => {
+		item.innerText = item.innerText.slice(0, 105) + "...";
+	});
+}

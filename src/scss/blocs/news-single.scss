@@ -1,13 +1,17 @@
 .news-list {
 }
 .news-single {
-	background: #ffffff;
-	@include adaptiveValue('padding-top', 25, 15);
 	& + .news-single {
 		@include adaptiveValue('margin-top', 10, 5);
 	}
 	@media (min-width: $mobile) {
 		border-top: 2px solid #4e4dc2;
+	}
+
+	&__body {
+		background: #ffffff;
+		@include adaptiveValue('padding-top', 25, 15);
+		box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.09);
 	}
 	/* .news-single__title */
 	&__title {
@@ -312,10 +316,10 @@
 		}
 	}
 }
-.red {
-}
-.news {
-	/* .news__block-comment */
-	&__block-comment {
-	}
+// Дискус
+
+.news__block-comment {
+	@include adaptiveValue('margin-top', 10, 5);
+	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.09);
+	background: #fff;
 }

@@ -44,9 +44,4 @@
 }
 
 
-// Дискус
 
-.news__block-comment{
-	border-top: 10px solid #f4f4f4;
-	@include adaptiveValue("border-width", 10, 5);
-}
