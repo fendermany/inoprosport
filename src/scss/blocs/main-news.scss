@@ -58,7 +58,7 @@
 			height: 18px;
 			width: max-content;
 			padding: 0 5px;
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 12px;
 			line-height: 18px;
 			display: flex;
@@ -94,12 +94,13 @@
 		}
 
 		&__title {
-			font-weight: 600;
+			font-weight: 700;
 			@include adaptiveValue('font-size', 18, 17);
 			@include adaptiveValue('line-height', 26, 22);
 		}
 		/* .news__descr */
 		&__descr {
+			font-weight: 500;
 			margin-top: 10px;
 			font-size: 14px;
 			line-height: 22px;
@@ -210,7 +211,7 @@
 			height: 18px;
 			width: max-content;
 			padding: 0 5px;
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 12px;
 			line-height: 18px;
 			display: flex;
@@ -220,7 +221,7 @@
 		&__title {
 			display: block;
 			margin-top: 5px;
-			font-weight: 600;
+			font-weight: 700;
 			@media (min-width: $mobile) {
 				display: inline;
 				margin-top: 0;
@@ -261,6 +262,7 @@
 	font-weight: 600;
 	padding-left: 28px;
 	padding-right: 28px;
+	outline: none;
 	@include adaptiveValue('font-size', 14, 12);
 	@include adaptiveValue('line-height', 22, 18);
 	@media (min-width: $mobile) {

@@ -57,7 +57,10 @@ body {
 	gap: 10px;
 	justify-content: space-between;
 	@media (min-width: $tablet) {
-		grid-template-areas: 'left center right';
+		grid-template-areas: 'center right';
+	}
+	@media (min-width:$pc){
+		 grid-template-areas: 'left center right'; 
 	}
 }
 

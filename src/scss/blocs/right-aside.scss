@@ -1,7 +1,7 @@
 .right-aside {
-	margin-top: 5px;
+	@include adaptiveValue("margin-top", 10, 5);
 	@media (min-width:$pc){
-		 @include adaptiveValue("margin-top", 10, 5);
+		 margin-top: 0;
 	}
 	/* .right-aside__spollers */
 	&__spollers {
@@ -14,7 +14,7 @@
 	margin-bottom: 5px;
 	/* .spollers__title */
 	&__title {
-		font-weight: 600;
+		font-weight: 700;
 		@include adaptiveValue('font-size', 18, 17);
 		@include adaptiveValue("line-height", 26, 22);
 		text-transform: uppercase;
@@ -93,6 +93,7 @@
 	}
 	/* .spollers__text */
 	&__text {
+		font-weight: 500;
 		margin-top: 5px;
 		@include adaptiveValue('font-size', 14, 12);
 		@include adaptiveValue('line-height', 22, 18);

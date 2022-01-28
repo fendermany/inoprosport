@@ -63,7 +63,7 @@
 	}
 	/* .lenta__item-title */
 	&__item-title {
-		font-weight: 600;
+		font-weight: 700;
 		@include adaptiveValue('font-size', 18, 17);
 		@include adaptiveValue('line-height', 26, 22);
 	}
@@ -71,6 +71,7 @@
 	&__item-descr {
 		display: none;
 		@media (min-width: $mobile) {
+			font-weight: 500;
 			display: block;
 			margin-top: 10px;
 			font-size: 14px;

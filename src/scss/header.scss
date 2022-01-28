@@ -208,7 +208,7 @@
 	max-width: 100%;
 	justify-content: center;
 	width: max-content;
-	@include adaptiveValue('padding-left', 20, 10);
+	padding-left: 10px;
 	@include adaptiveValue('padding-right', 20, 10);
 	@media (min-width: $mobileSmall) {
 		justify-content: flex-start;
@@ -233,7 +233,7 @@
 	overflow: hidden;
 	flex-wrap: wrap;
 	@media (min-width: $mobile) {
-		margin-right: 40px;
+		margin-right: 30px;
 	}
 }
 
@@ -299,50 +299,18 @@
 .header__menu-btn_wrap {
 	position: relative;
 	z-index: 50;
-	width: 9px;
-	height: 9px;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 700;
+	color: #fff;
 	cursor: pointer;
 	display: none;
 	@media (min-width: em(621)) {
 		display: block;
+		&:hover {
+			color: #a7a6e1;
+		}
 	}
-}
-
-.header__menu-btn_wrap:before {
-	content: '';
-	width: 9px;
-	height: 2px;
-	background-color: #fff;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	-webkit-transition: opacity 0.3s, background-color 0.3s;
-	-o-transition: opacity 0.3s, background-color 0.3s;
-	transition: opacity 0.3s, background-color 0.3s;
-}
-
-.header__menu-btn_wrap:after {
-	content: '';
-	width: 2px;
-	height: 9px;
-	background-color: #fff;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	-webkit-transition: opacity 0.3s, background-color 0.3s;
-	-o-transition: opacity 0.3s, background-color 0.3s;
-	transition: opacity 0.3s, background-color 0.3s;
-}
-
-.header__menu-btn_wrap:hover:after,
-.header__menu-btn_wrap:hover:before {
-	background-color: #a7a6e1;
 }
 
 .categoryChoice__btn:hover:after,
@@ -556,14 +524,13 @@
 .header__social-open:after {
 	content: '';
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-	background-color: #fff;
-	top: -10px;
-	left: -10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 10px 0 0;
+	border-color: #ffffff transparent transparent transparent;
+	top: 0;
+	left: 0;
 }
 
 .header__search-wrap {

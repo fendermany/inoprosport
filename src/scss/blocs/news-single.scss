@@ -87,7 +87,7 @@
 		@media (min-width: $mobile) {
 			border-radius: 2px;
 			height: 18px;
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 12px;
 			line-height: 18px;
 			padding: 0 5px;
@@ -152,6 +152,7 @@
 	}
 	/* .news-single__intro */
 	&__intro {
+		font-weight: 500;
 		@include adaptiveValue('margin-top', 30, 15);
 		@include adaptiveValue('font-size', 14, 12);
 		@include adaptiveValue('line-height', 22, 18);
@@ -173,6 +174,7 @@
 	}
 	/* .news-single__content */
 	&__content {
+		font-weight: 500;
 		@include adaptiveValue('margin-top', 25, 15);
 		@include adaptiveValue('font-size', 16, 14);
 		@include adaptiveValue('line-height', 26, 22);
@@ -185,10 +187,11 @@
 			@include adaptiveValue('margin-top', 20, 15);
 		}
 		a {
-			font-weight: 600;
+			font-weight: 700;
 			color: #4e4dc2;
 		}
 		p.quote {
+			font-weight: 500;
 			@include adaptiveValue('margin-top', 25, 15);
 			@include adaptiveValue('font-size', 14, 12);
 			@include adaptiveValue('line-height', 22, 18);
