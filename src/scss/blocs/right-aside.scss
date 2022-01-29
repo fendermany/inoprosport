@@ -1,7 +1,7 @@
 .right-aside {
-	@include adaptiveValue("margin-top", 10, 5);
-	@media (min-width:$pc){
-		 margin-top: 0;
+	@include adaptiveValue('margin-top', 10, 5);
+	@media (min-width: $tablet) {
+		margin-top: 0;
 	}
 	/* .right-aside__spollers */
 	&__spollers {
@@ -9,22 +9,29 @@
 	@media (min-width: $tablet) {
 		width: rem(329);
 	}
+	.showmore {
+		display: block;
+		@include adaptiveValue("margin-top", 10, 5);
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
 }
 .spollers {
 	box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.09);
 	margin-bottom: 5px;
-	@media (min-width:$tablet){
-		 margin-bottom: 0; 
+	@media (min-width: $tablet) {
+		margin-bottom: 0;
 	}
 	/* .spollers__title */
 	&__title {
 		font-weight: 700;
 		@include adaptiveValue('font-size', 18, 17);
-		@include adaptiveValue("line-height", 26, 22);
+		@include adaptiveValue('line-height', 26, 22);
 		text-transform: uppercase;
 		color: #000000;
 		height: 60px;
-		@include adaptiveValue("padding", 20, 15);
+		@include adaptiveValue('padding', 20, 15);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -44,24 +51,24 @@
 	/* .spollers__item */
 	&__item {
 		width: 100%;
-		@include adaptiveValue("padding-top", 15, 10);
-		@include adaptiveValue("padding-bottom", 15, 10);
-		@include adaptiveValue("padding-left", 20, 10);
-		@include adaptiveValue("padding-right", 20, 10);
+		@include adaptiveValue('padding-top', 15, 10);
+		@include adaptiveValue('padding-bottom', 15, 10);
+		@include adaptiveValue('padding-left', 20, 10);
+		@include adaptiveValue('padding-right', 20, 10);
 		border-bottom: 1px solid #dbdbdb;
 		display: inline-flex;
 		flex-direction: column;
 		&:nth-child(odd) {
 			background: #fff;
-			@media (min-width:$mobile){
-				 background: #f7f7f7; 
+			@media (min-width: $mobile) {
+				background: #f7f7f7;
 			}
 		}
 		&:nth-child(even) {
 			background: #fff;
 		}
-		@media (min-width:$tablet){
-			 display: inline-block; 
+		@media (min-width: $tablet) {
+			display: inline-block;
 		}
 	}
 
@@ -74,8 +81,8 @@
 				display: none;
 			}
 		}
-		@media (min-width:$tablet){
-			 display: inline-block; 
+		@media (min-width: $tablet) {
+			display: inline-block;
 		}
 	}
 	/* .spollers__time */

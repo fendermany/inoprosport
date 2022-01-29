@@ -46,9 +46,7 @@
 			height: 0;
 		}
 		& > * + * {
-			@media (min-width: $mobile) {
-				margin-left: 10px;
-			}
+			@include adaptiveValue("margin-left", 10, 5);
 		}
 		@media (min-width: $mobile) {
 			height: 50px;
@@ -79,21 +77,17 @@
 			align-items: center;
 			justify-content: center;
 			font-weight: 700;
-			background: #4242a5;
-			color: #fff;
+			background: #ffffff;
+			color: #4e4dc2;
 			border-radius: 2px;
 			order: 0;
 			pointer-events: none;
-			@media (min-width: $mobileSmall) {
-				margin-right: 0;
-			}
-			@media (min-width: $tablet) {
-				background: #ffffff;
-				color: #4e4dc2;
-			}
 			.categoryChoice__quantity {
 				display: none !important;
 			}
+		}
+		&:last-child{
+			display: none;
 		}
 	}
 	/* .categoryChoice__link */

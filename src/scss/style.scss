@@ -38,9 +38,9 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 $pc: em(
 	$containerWidth
 ); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
-$tablet: em((1023.98)); // Планшеты, некоторые телефоны в горизонтальном положении
-$mobile: em(767.98); // Телефоны L
-$mobileSmall: em(479.98); // Телефоны S
+$tablet: em((1024)); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(768); // Телефоны L
+$mobileSmall: em(480); // Телефоны S
 
 // Тип адаптива:
 // 1 = отзывчивость (у контейнера нет брейкпоинтов),
@@ -48,7 +48,7 @@ $mobileSmall: em(479.98); // Телефоны S
 $responsiveType: 2;
 
 // Обнуление и общие параметры ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
-@import "base/null";
+@import 'base/null';
 
 body {
 	// Скролл заблокирован
@@ -98,25 +98,25 @@ body {
 } @else {
 	// По брейк-поинтам
 	[class*='__container'] {
-		margin: 0 auto;
-		@if ($maxWidthContainer>0) {
-			max-width: rem($maxWidthContainer);
-			box-sizing: content-box;
-		} @else {
-			@if ($containerPadding>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
+		max-width: none;
+		@if ($containerPadding>0 and $maxWidthContainer>0) {
+			padding: 0 rem(math.div($containerPadding, 2));
 		}
-		@media (max-width: $pc) {
-			max-width: rem(1027);
-		}
-		@media (max-width: $tablet) {
+		@media (min-width: $mobile) {
 			max-width: rem(768);
 		}
-		@media (max-width: $mobile) {
-			max-width: none;
-			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
+		@media (min-width: $tablet) {
+			max-width: rem(1023);
+		}
+		@media (min-width: $pc) {
+			margin: 0 auto;
+			@if ($maxWidthContainer>0) {
+				max-width: rem($maxWidthContainer);
+				box-sizing: content-box;
+			} @else {
+				@if ($containerPadding>0) {
+					padding: 0 rem(math.div($containerPadding, 2));
+				}
 			}
 		}
 	}

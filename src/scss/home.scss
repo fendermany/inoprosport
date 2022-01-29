@@ -54,10 +54,10 @@ body {
 	background-color: #f4f4f4;
 	position: relative;
 	z-index: 5;
-	gap: 10px;
 	justify-content: space-between;
 	@media (min-width: $tablet) {
 		grid-template-areas: 'center right';
+		gap: 10px;
 	}
 	@media (min-width:$pc){
 		 grid-template-areas: 'left center right'; 

@@ -5,6 +5,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	@include adaptiveValue('margin-top', 10, 5);
 	& > * + * {
 		margin-top: 5px;
 	}
@@ -27,6 +28,9 @@
 			margin-left: 0;
 		}
 	}
+	@media (min-width:$pc){
+		 margin-top: 0; 
+	}
 	/* .left-aside__banner */
 	&__banner {
 		width: 100%;
@@ -35,5 +39,25 @@
 			max-width: 100%;
 			width: 100%;
 		}
+	}
+}
+
+
+.aside__wrap--right{
+	display: flex;
+	flex-direction: column;
+}
+
+.aside__content_inner--right{
+	order: 1;
+	@media (min-width:$tablet){
+		 order: 0; 
+	}
+}
+
+.aside__content_inner--left{
+	order: 0;
+	@media (min-width:$tablet){
+		 order: 1; 
 	}
 }
