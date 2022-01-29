@@ -20,12 +20,12 @@
 		padding: 15px;
 	}
 	@media (min-width: $tablet) {
-		flex-direction: column;
+		flex-direction: column !important;
 		width: rem(329);
 
 		& > * + * {
-			margin-top: 15px;
-			margin-left: 0;
+			margin-top: 15px !important;
+			margin-left: 0 !important;
 		}
 	}
 	@media (min-width:$pc){

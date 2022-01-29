@@ -219,7 +219,7 @@
 		max-width: calc(100% - 235px);
 	}
 	@media (min-width: $tablet) {
-		max-width: calc(100% - 355px);
+		max-width: calc(100% - 355px) !important;
 	}
 }
 
@@ -251,8 +251,6 @@
 	@include adaptiveValue('font-size', 14, 12);
 	@include adaptiveValue('line-height', 22, 20);
 	font-weight: 700;
-	@media (min-width: $mobileSmall) {
-	}
 }
 
 .menu__item-all {
@@ -669,55 +667,3 @@
 	width: 16px;
 	height: 16px;
 }
-//====================================================================================================
-
-//Burger
-/*
-.icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: px(30);
-		height: px(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: px(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - px(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - px(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - px(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
-}
-*/

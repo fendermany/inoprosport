@@ -59,8 +59,8 @@ body {
 		grid-template-areas: 'center right';
 		gap: 10px;
 	}
-	@media (min-width:$pc){
-		 grid-template-areas: 'left center right'; 
+	@media (min-width: $pc) {
+		grid-template-areas: 'left center right' !important;
 	}
 }
 
@@ -75,6 +75,7 @@ body {
 .content {
 	flex: 1 1 auto;
 	grid-area: center;
+	width: 100%;
 }
 
 .red {
@@ -83,16 +84,6 @@ body {
 
 .blue {
 	background: #4e4dc2;
-}
-
-.content {
-	width: 100%;
-}
-
-@media (max-width: $pc) {
-	.content {
-		order: 0;
-	}
 }
 
 @media (max-width: $mobile) {

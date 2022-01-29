@@ -102,7 +102,7 @@ body {
 		@if ($containerPadding>0 and $maxWidthContainer>0) {
 			padding: 0 rem(math.div($containerPadding, 2));
 		}
-		@media (min-width: $mobile) {
+		@media (min-width: $mobile) and (max-width: em(1023.98)) {
 			max-width: rem(768);
 		}
 		@media (min-width: $tablet) {
@@ -111,11 +111,11 @@ body {
 		@media (min-width: $pc) {
 			margin: 0 auto;
 			@if ($maxWidthContainer>0) {
-				max-width: rem($maxWidthContainer);
+				max-width: rem($maxWidthContainer) !important;
 				box-sizing: content-box;
 			} @else {
 				@if ($containerPadding>0) {
-					padding: 0 rem(math.div($containerPadding, 2));
+					padding: 0 rem(math.div($containerPadding, 2)) !important;
 				}
 			}
 		}

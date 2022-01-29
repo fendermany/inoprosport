@@ -3,18 +3,19 @@
 	@media (min-width: $tablet) {
 		margin-top: 0;
 	}
-	/* .right-aside__spollers */
-	&__spollers {
-	}
+
 	@media (min-width: $tablet) {
 		width: rem(329);
 	}
 	.showmore {
 		display: block;
-		@include adaptiveValue("margin-top", 10, 5);
+		@include adaptiveValue('margin-top', 10, 5);
 		@media (min-width: $tablet) {
 			display: none;
 		}
+	}
+	/* .right-aside__spollers */
+	&__spollers {
 	}
 }
 .spollers {
@@ -139,7 +140,7 @@
 			margin-left: 10px;
 			background: transparent;
 			svg path {
-				fill: #4e4dc2;
+				fill: #4e4dc2 !important;
 			}
 		}
 	}

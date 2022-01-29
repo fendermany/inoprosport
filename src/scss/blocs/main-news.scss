@@ -53,8 +53,8 @@
 					bottom: unset;
 				}
 				@media (min-width:em(600)){
-					top: unset;
-					bottom: 5px;
+					top: unset !important;
+					bottom: 5px !important;
 				}
 				@media (min-width: $mobile) {
 					display: none;
