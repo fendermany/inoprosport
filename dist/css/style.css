@@ -1503,7 +1503,7 @@ h6 {
 }
 @media (min-width: 84.75em) {
   .left-aside {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 }
 .left-aside__banner {
@@ -1565,7 +1565,7 @@ h6 {
 }
 @media (min-width: 64em) {
   .right-aside {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 }
 @media (min-width: 64em) {
