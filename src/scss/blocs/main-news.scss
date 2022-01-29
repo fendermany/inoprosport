@@ -19,10 +19,10 @@
 		/* .news__img */
 		&__img {
 			width: 100%;
-			@include adaptiveValue("height", 430, 220, 600, 360, 1);
+			@include adaptiveValue('height', 430, 220, 600, 360, 1);
 			position: relative;
-			@media (min-width:em(600)){
-				 height: auto !important; 
+			@media (min-width: em(600)) {
+				height: auto !important;
 			}
 			img {
 				z-index: -1;
@@ -168,7 +168,7 @@
 			}
 			@media (min-width: em(600)) {
 				text-overflow: ellipsis;
-				display: -webkit-box;
+				display: -webkit-box !important;
 				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
