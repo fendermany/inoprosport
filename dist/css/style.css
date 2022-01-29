@@ -1987,15 +1987,14 @@ h6 {
 }
 
 .fullnews {
-  min-height: 220px;
   display: grid;
-  grid-template: 220px auto/1fr;
+  grid-template: auto auto/1fr;
   grid-auto-rows: auto;
   position: relative;
 }
 @media (min-width: 37.5em) {
   .fullnews {
-    grid-template: 1fr/300px 1fr;
+    grid-template: 220px/300px 1fr;
   }
 }
 .fullnews .news {
@@ -2009,13 +2008,38 @@ h6 {
 }
 .fullnews .news__img {
   width: 100%;
-  height: 100%;
   position: relative;
   /* .news__comments */
 }
+@media (min-width: 37.5em) {
+  .fullnews .news__img {
+    height: 26.875rem;
+  }
+}
+@media (min-width: 22.5em) and (max-width: 37.5em) {
+  @supports (height: clamp( 13.75rem , -5.9375rem  +  87.5vw , 26.875rem )) {
+    .fullnews .news__img {
+      height: clamp( 13.75rem , -5.9375rem  +  87.5vw , 26.875rem );
+    }
+  }
+  @supports not (height: clamp( 13.75rem , -5.9375rem  +  87.5vw , 26.875rem )) {
+    .fullnews .news__img {
+      height: calc(13.75rem + 13.125 * (100vw - 22.5rem) / 15);
+    }
+  }
+}
+@media (max-width: 22.5em) {
+  .fullnews .news__img {
+    height: 13.75rem;
+  }
+}
+@media (min-width: 37.5em) {
+  .fullnews .news__img {
+    height: auto !important;
+  }
+}
 .fullnews .news__img img {
   z-index: -1;
-  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2282,9 +2306,19 @@ h6 {
   line-height: 22px;
   display: none;
 }
-@media (min-width: 37.5em) {
+@media (min-width: 30em) {
   .fullnews .news__descr {
     display: block;
+  }
+}
+@media (min-width: 37.5em) {
+  .fullnews .news__descr {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
   }
 }
 .fullnews .news__comments-count {

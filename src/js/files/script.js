@@ -75,6 +75,6 @@ const newsDescriptions = document.querySelectorAll('.news__descr');
 
 if(newsDescriptions) {
 	newsDescriptions.forEach(item => {
-		item.innerText = item.innerText.slice(0, 105) + "...";
+		item.innerText = item.innerText + "...";
 	});
 }
