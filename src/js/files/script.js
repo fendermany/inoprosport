@@ -49,10 +49,10 @@ showMoreBtn.forEach(item => {
 		if (e.target) {
 			item.querySelector('.showmore__text').innerText = 'Загрузка...';
 			const blinkDotsInterval1 = setInterval(() => {
-				blinkdots(item)
+				blinkdots(item);
 			}, 1000);
 			const blinkDotsInterval2 = setInterval(() => {
-				blinkdots2(item)
+				blinkdots2(item);
 			}, 1000);
 
 			// Затем после получения данных нужно сделать clearInterval, вернуть надпись "Показать ещё", скрыть точки.
@@ -68,13 +68,72 @@ showMoreBtn.forEach(item => {
 	});
 });
 
-
 // Обрезаем длину текста в заголовках
 
 const newsDescriptions = document.querySelectorAll('.news__descr');
 
-if(newsDescriptions) {
+if (newsDescriptions) {
 	newsDescriptions.forEach(item => {
-		item.innerText = item.innerText + "...";
+		item.innerText = item.innerText + '...';
 	});
 }
+
+//\\//\\//\\\//\\ Перетаскивание вместо скролла //\\//\\//\\\//\\
+
+const dragScroll = timeline => {
+	// timeline - блок с горизонтальным скроллом
+	timeline.onmousedown = () => {
+		let pageX = 0;
+
+		timeline.onmousemove = e => {
+			if (pageX !== 0) {
+				timeline.scrollLeft = timeline.scrollLeft + (pageX - e.pageX);
+			}
+			pageX = e.pageX;
+		};
+
+		// заканчиваем выполнение событий
+		document.onmouseup = () => {
+			timeline.onmousemove = null;
+			timeline.onmouseup = null;
+		};
+
+		timeline.mouseout = () => {
+			timeline.onmousemove = null;
+			document.onmouseup = null;
+		};
+
+		// отменяем браузерный drag
+		timeline.ondragstart = () => {
+			return false;
+		};
+	};
+};
+
+const topbarList = document.querySelector('.categoryChoice__list');
+
+if (topbarList) {
+	dragScroll(topbarList);
+}
+
+// Действия с карточкой новости
+
+
+const news = document.querySelectorAll('.fullnews');
+
+news.forEach(item => {
+
+	let newsTitle = item.querySelector('.news__title a'),
+			newsDescr = item.querySelector('.news__descr'),
+			newsComment = item.querySelector('.news__comments'),
+			lines = +newsTitle.textContent.split('\n').length;
+
+	console.log(lines);
+	
+	
+	if (lines >= 5) {
+		newsDescr.style.cssText = `-webkit-line-clamp: 2;`;
+		newsComment.style.cssText = `right: 10px;`;
+	}
+	
+});

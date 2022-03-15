@@ -158,6 +158,7 @@
 		}
 		/* .news__descr */
 		&__descr {
+			max-width: 85%;
 			font-weight: 500;
 			margin-top: 10px;
 			font-size: 14px;
@@ -169,7 +170,6 @@
 			@media (min-width: em(600)) {
 				text-overflow: ellipsis;
 				display: -webkit-box !important;
-				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
 				overflow: hidden;
 				-webkit-line-clamp: 3;

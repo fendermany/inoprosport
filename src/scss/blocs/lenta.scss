@@ -60,7 +60,8 @@
 	&__item-image {
 		width: 100%;
 		@include adaptiveValue('height', 376, 200);
-		img {
+		img,
+		iframe {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;

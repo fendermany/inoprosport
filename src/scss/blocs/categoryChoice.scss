@@ -46,7 +46,7 @@
 			height: 0;
 		}
 		& > * + * {
-			@include adaptiveValue("margin-left", 10, 5);
+			@include adaptiveValue('margin-left', 10, 5);
 		}
 		@media (min-width: $mobile) {
 			height: 50px;
@@ -68,6 +68,9 @@
 			background-color: #fff;
 			color: #4e4dc2;
 			order: 1;
+			.categoryChoice__link {
+				color: #4e4dc2;
+			}
 		}
 		&:first-child {
 			@include adaptiveValue('font-size', 14, 12);
@@ -85,8 +88,11 @@
 			.categoryChoice__quantity {
 				display: none !important;
 			}
+			.categoryChoice__link {
+				color: #4e4dc2;
+			}
 		}
-		&:last-child{
+		&:last-child {
 			display: none;
 		}
 	}
@@ -95,6 +101,7 @@
 		@include adaptiveValue('font-size', 14, 12);
 		@include adaptiveValue('line-height', 22, 20);
 		font-weight: 700;
+		color: #fff;
 		white-space: nowrap;
 	}
 	/* .categoryChoice__quantity */

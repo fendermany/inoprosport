@@ -167,6 +167,35 @@
     if (newsDescriptions) newsDescriptions.forEach((item => {
         item.innerText = item.innerText + "...";
     }));
+    const dragScroll = timeline => {
+        timeline.onmousedown = () => {
+            let pageX = 0;
+            timeline.onmousemove = e => {
+                if (0 !== pageX) timeline.scrollLeft = timeline.scrollLeft + (pageX - e.pageX);
+                pageX = e.pageX;
+            };
+            document.onmouseup = () => {
+                timeline.onmousemove = null;
+                timeline.onmouseup = null;
+            };
+            timeline.mouseout = () => {
+                timeline.onmousemove = null;
+                document.onmouseup = null;
+            };
+            timeline.ondragstart = () => false;
+        };
+    };
+    const topbarList = document.querySelector(".categoryChoice__list");
+    if (topbarList) dragScroll(topbarList);
+    const news = document.querySelectorAll(".fullnews");
+    news.forEach((item => {
+        let newsTitle = item.querySelector(".news__title a"), newsDescr = item.querySelector(".news__descr"), newsComment = item.querySelector(".news__comments"), lines = +newsTitle.textContent.split("\n").length;
+        console.log(lines);
+        if (lines >= 5) {
+            newsDescr.style.cssText = `-webkit-line-clamp: 2;`;
+            newsComment.style.cssText = `right: 10px;`;
+        }
+    }));
     document.addEventListener("DOMContentLoaded", (() => {
         let stickySidebar = () => {
             const asides = document.querySelectorAll('[data-sticky="true"]'), header = document.querySelector("header");
