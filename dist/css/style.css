@@ -2307,7 +2307,6 @@ h6 {
   }
 }
 .fullnews .news__descr {
-  max-width: 85%;
   font-weight: 500;
   margin-top: 10px;
   font-size: 14px;
@@ -2326,6 +2325,11 @@ h6 {
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 3;
+  }
+}
+@media (min-width: 48em) {
+  .fullnews .news__descr {
+    max-width: 85%;
   }
 }
 .fullnews .news__comments-count {
